@@ -24,3 +24,11 @@ body {
     display: inline;
     background-color: aquamarine;
 }
+
+.btn-secondary {
+    background-color: rgb(60, 177, 138);
+}
+
+.btn-secondary:hover {
+    background-color: rgb(23, 128, 93);
+}
