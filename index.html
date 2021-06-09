@@ -1,33 +1,173 @@
 <!DOCTYPE html>
-<html lang= "en">
-<head>
-<title>Card Header and Footer</title>
-<link rel="stylesheet" href="./CSS/style.css">
-<style>
-.bcontent {
-margin-top: 10px;
-}
-</style>
-</head>
+<html lang="en">
+  <head>
+      <title>Hello Team 6!</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+      <link rel="stylesheet" href="./CSS/styles.css">
+  </head>
 <body>
-    <div class="card">
-        <div class="card-header">
-          Wild Birds
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Staying On Task</h5>
-          <p class="card-text">"To keep on growing in life you have to keep on learning from things that happen around you. Many people are of the opinion that learning stops after you complete your education. But it is not so! You are learning and growing every moment." -Wild Birds</p>
-          <a href="#" class="btn btn-primary">More Adventures</a>
-        </div>
-        <!--Footer Goes Here-->
-        <div class=”card”>
-            <div class="card-footer"><p class="card-text">Authors: Brent, Chivonne & Wendy <strong>email:</strong> <a href="mailto:hege@example.com">wildbirds@generationtech.org</a> | <strong>phone:</strong> 917-555-1098 | <strong>address:</strong> 371 284th St, New York, NY, 10001</p>
+  <div class="banner">
+    <h1>Hello team 6!</h1>
+  </div>
+<form>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="name">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Example select</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option>1</Description>
+        <option>2</Assigned To>
+        <option>3</Due Date>
+        <option>4</Status>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect2">Example multiple select</label>
+      <select multiple class="form-control" id="exampleFormControlSelect2">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+  </form>
+
+    <div id="card-display col-md-6">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="card">
+            <h1 class="card-header">Mow the lawn</h1>
+            <div class="card-body">
+              <p class="card-text">Omnis porro quae voluptatem eveniet quasi quos eius. Voluptatibus soluta quae porro omnis architecto. Voluptas enim fugit molestias quis quasi pariatur corrupti non.</p>
+              <p>Assigned to:</p>
+              <p>Date due:</p>
+              <label for="status">Status</label>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown button
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Todo</a>
+                    <a class="dropdown-item" href="#">In Progress</a>
+                    <a class="dropdown-item" href="#">Review</a>
+                    <a class="dropdown-item" href="#">Done</a>
+                  </div>
+                </div>
+              <a href="#" class="btn btn-success">Completed</a>
+              <a href="#" class="btn btn-danger">Delete</a>
             </div>
           </div>
-      </div>
+        </li>
+        <li class="list-group-item">
+          <div class="card">
+            <h1 class="card-header">Make salsa</h1>
+            <div class="card-body">
+              <p class="card-text">Omnis porro quae voluptatem eveniet quasi quos eius. Voluptatibus soluta quae porro omnis architecto. Voluptas enim fugit molestias quis quasi pariatur corrupti non.</p>
+              <p>Assigned to:</p>
+              <p>Date due:</p>
+              <label for="status">Status</label>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Todo</a>
+                  <a class="dropdown-item" href="#">In Progress</a>
+                  <a class="dropdown-item" href="#">Review</a>
+                  <a class="dropdown-item" href="#">Done</a>
+                </div>
+              </div>
+              <a href="#" class="btn btn-success">Completed</a>
+              <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="card">
+            <h1 class="card-header">Rewrite resume</h1>
+            <div class="card-body">
+              <p class="card-text">Omnis porro quae voluptatem eveniet quasi quos eius. Voluptatibus soluta quae porro omnis architecto. Voluptas enim fugit molestias quis quasi pariatur corrupti non.</p>
+              <p>Assigned to:</p>
+              <p>Date due:</p>
+              <label for="status">Status</label>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Todo</a>
+                  <a class="dropdown-item" href="#">In Progress</a>
+                  <a class="dropdown-item" href="#">Review</a>
+                  <a class="dropdown-item" href="#">Done</a>
+                </div>
+              </div>
+              <a href="#" class="btn btn-success">Completed</a>
+              <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="card">
+            <h1 class="card-header">Pay utility bill</h1>
+            <div class="card-body">
+              <p class="card-text">Omnis porro quae voluptatem eveniet quasi quos eius. Voluptatibus soluta quae porro omnis architecto. Voluptas enim fugit molestias quis quasi pariatur corrupti non.</p>
+              <p>Assigned to:</p>
+              <p>Date due:</p>
+              <label for="status">Status</label>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Todo</a>
+                  <a class="dropdown-item" href="#">In Progress</a>
+                  <a class="dropdown-item" href="#">Review</a>
+                  <a class="dropdown-item" href="#">Done</a>
+                </div>
+              </div>
+              <a href="#" class="btn btn-success">Completed</a>
+              <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="card">
+            <h1 class="card-header">Research cars</h1>
+            <div class="card-body">
+              <p class="card-text">Omnis porro quae voluptatem eveniet quasi quos eius. Voluptatibus soluta quae porro omnis architecto. Voluptas enim fugit molestias quis quasi pariatur corrupti non.</p>
+              <p>Assigned to:</p>
+              <p>Date due:</p>
+              <label for="status">Status</label>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Todo</a>
+                  <a class="dropdown-item" href="#">In Progress</a>
+                  <a class="dropdown-item" href="#">Review</a>
+                  <a class="dropdown-item" href="#">Done</a>
+                </div>
+              </div>
+              <a href="#" class="btn btn-success">Completed</a>
+              <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
 </body>
 </html>
-
-   
-   
-    
