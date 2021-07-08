@@ -32,6 +32,7 @@ body {
     background: #1abc9c;
     color: white;
     font-size: 50px;
+    padding: 0.5em;
   }
   
   .card-footer {
