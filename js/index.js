@@ -1,9 +1,11 @@
 const taskManager = new TaskManager();
 const taskForm = document.getElementById("task-form");
 taskForm.addEventListener("submit", function(event) {
+  const email = 
+    document.getElementById("");
+  if (true) { // add isValid(taskForm) here
+    taskManager.addTask();
+  }
   event.preventDefault();
+  taskForm.reset();
 });
-/* taskManager.addTask("Test addTask method",
-  "Write and test the addTask method on TaskManager",
-  "Brent", "2021-07-08");
-console.log(taskManager.tasks); */
