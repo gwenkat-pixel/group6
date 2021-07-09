@@ -9,3 +9,7 @@ taskForm.addEventListener("submit", function(event) {
   event.preventDefault();
   taskForm.reset();
 });
+const taskHtml = createTaskHtml("Go to supermarket", 
+  "Pick up paper towels, burger buns, and tabouli", 
+  "Bob", "2021-07-10", "TODO");
+  console.log(taskHtml);

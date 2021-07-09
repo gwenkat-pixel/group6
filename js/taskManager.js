@@ -26,6 +26,7 @@ function createTaskHtml(name, description, assignedTo,
     </div>
   </li>
     `;
+  return html;
 }
 
 class TaskManager {
