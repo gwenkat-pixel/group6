@@ -47,4 +47,18 @@ class TaskManager {
     }
     this.tasks.push(newTask);
   }
+  render() {
+    const tasksHtmlList = [];
+    const listElement = document.getElementById("task-list");
+    this.tasks.forEach(function(element) {
+      const task = element;
+      const date = new Date(element.dueDate);
+      const isoDate = date.toISOString();
+      const taskHtml = createTaskHtml(element.name,
+        element.description, element.assignedTo,
+        isoDate, element[status]);
+        tasksHtmlList.push(taskHtml);
+    });
+    tasks.innerHTML = tasksHtml;
+  }
 }
