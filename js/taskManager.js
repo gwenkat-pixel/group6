@@ -30,7 +30,7 @@ function createTaskHtml(name, description, assignedTo,
 }
 
 class TaskManager {
-  constructor(tasks, currentId=0) {
+  constructor(currentId=0) {
     this.tasks = [];
     this.currentId = currentId;
   }
@@ -59,6 +59,6 @@ class TaskManager {
         isoDate, element[status]);
         tasksHtmlList.push(taskHtml);
     });
-    tasks.innerHTML = tasksHtml;
+    this.tasks.innerHTML = taskHtml;
   }
 }
