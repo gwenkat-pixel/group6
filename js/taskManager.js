@@ -30,8 +30,12 @@ function createTaskHtml(name, description, assignedTo,
 }
 
 function validateFormFieldInput(data) {
-  const name = document.getElementById("name").value;
-  console.log(name);
+  const name = document.getElementById("name").value,
+    description = document.getElementById("description").value,
+    assignedTo = document.getElementById("assigned-to").value;
+    console.log("Name: " + name);
+    console.log("Description: " + description);
+    console.log("Assigned to: " + assignedTo);
 }
 
 class TaskManager {

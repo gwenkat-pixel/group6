@@ -5,6 +5,7 @@ taskForm.addEventListener("submit", function(event) {
   const description = document.getElementById("description");
   const assignedTo = document.getElementById("assigned-to");
   const dueDate = document.getElementById("due-date");
+  validateFormFieldInput(this);
   if (true) { // add isValid(taskForm) here
     taskManager.addTask(name.value, description.value, 
       assignedTo.value, dueDate.value);
