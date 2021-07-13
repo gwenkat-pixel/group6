@@ -29,6 +29,11 @@ function createTaskHtml(name, description, assignedTo,
   return html;
 }
 
+function validateFormFieldInput(data) {
+  const name = document.getElementById("name").value;
+  console.log(name);
+}
+
 class TaskManager {
   constructor(currentId=0) {
     this.tasks = [];
