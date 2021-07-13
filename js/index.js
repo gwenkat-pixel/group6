@@ -15,11 +15,11 @@
     event.preventDefault();
     taskForm.reset();
   });
-  /* taskManager.addTask("Go to supermarket", 
+  taskManager.addTask("Go to supermarket", 
     "Pick up paper towels, burger buns, and tabouli", 
     "Bob", "July 10, 2021", "TODO");
   taskManager.addTask("Make hummus", 
     "Puree garbanzo beans for the party", 
-    "Bob", "July 10, 2021", "TODO"); */
+    "Bob", "July 10, 2021", "TODO");
   taskManager.render();
 })();
