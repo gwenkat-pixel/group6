@@ -51,14 +51,14 @@ class TaskManager {
     const tasksHtmlList = [];
     const listElement = document.getElementById("task-list");
     this.tasks.forEach(function(element) {
-      const task = element;
+      console.log(element);
       const date = new Date(element.dueDate);
       const isoDate = date.toISOString();
       const taskHtml = createTaskHtml(element.name,
         element.description, element.assignedTo,
-        isoDate, element[status]);
+        isoDate, element.status);
         tasksHtmlList.push(taskHtml);
     });
-    this.tasks.innerHTML = taskHtml;
+    listElement.innerHTML = tasksHtmlList;
   }
 }
