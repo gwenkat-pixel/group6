@@ -70,6 +70,5 @@ class TaskManager {
         tasksHtmlList.push(taskHtml);
     });
     listElement.innerHTML = tasksHtmlList;
-    console.log(listElement);
   }
 }
