@@ -1,4 +1,20 @@
 ( function(){
+   // Bootstrap's validation code 
+   var forms = document.querySelectorAll('.needs-validation');
+
+   // Loop over them and prevent submission
+   Array.prototype.slice.call(forms)
+     .forEach(function (form) {
+       form.addEventListener('submit', function (event) {
+         if (!form.checkValidity()) {
+           event.preventDefault();
+           event.stopPropagation();
+         }
+ 
+         form.classList.add('was-validated');
+       }, false)
+     })
+
   const taskManager = new TaskManager(),
         taskForm = document.getElementById("task-form"),
         name = document.getElementById("name"),
@@ -15,11 +31,11 @@
     event.preventDefault();
     taskForm.reset();
   });
-  taskManager.addTask("Go to supermarket", 
+/*   taskManager.addTask("Go to supermarket", 
     "Pick up paper towels, burger buns, and tabouli", 
     "Bob", "July 10, 2021", "TODO");
   taskManager.addTask("Make hummus", 
     "Puree garbanzo beans for the party", 
-    "Bob", "July 10, 2021", "TODO");
+    "Bob", "July 10, 2021", "TODO"); */
   taskManager.render();
 })();
