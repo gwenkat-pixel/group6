@@ -30,7 +30,7 @@ function createTaskHtml(name, description, assignedTo,
 }
 
 class TaskManager {
-  constructor(tasks, currentId=0) {
+  constructor(currentId=0) {
     this.tasks = [];
     this.currentId = currentId;
   }
@@ -46,5 +46,19 @@ class TaskManager {
       status
     }
     this.tasks.push(newTask);
+  }
+  render() {
+    const tasksHtmlList = [];
+    const listElement = document.getElementById("task-list");
+    this.tasks.forEach(function(element) {
+      console.log(element);
+      const date = new Date(element.dueDate);
+      const isoDate = date.toISOString();
+      const taskHtml = createTaskHtml(element.name,
+        element.description, element.assignedTo,
+        isoDate, element.status);
+        tasksHtmlList.push(taskHtml);
+    });
+    listElement.innerHTML = tasksHtmlList;
   }
 }
