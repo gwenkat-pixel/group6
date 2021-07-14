@@ -29,18 +29,6 @@ function createTaskHtml(name, description, assignedTo,
   return html;
 }
 
-/* function validateFormFieldInput() {
-/*   const name = document.getElementById("name"),
-    description = document.getElementById("description").value,
-    assignedTo = document.getElementById("assigned-to").value; */
-
-/*   if (!taskName.value) { */
-    // document.querySelector("#name-alert").style.display = "block";
-/*     document.querySelector("#name-alert").classList.remove("d-none");
-    return false;
-  } else {return true;} */
-//}
-
 class TaskManager {
   constructor(currentId=0) {
     this.tasks = [];
