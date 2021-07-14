@@ -2,6 +2,10 @@ body {
     color: aquamarine;
 }
 
+/* .alert-danger {
+    display: none;
+}
+ */
 .card {
     color: black;
     width: 25vw;

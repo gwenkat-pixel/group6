@@ -21,11 +21,11 @@
     </div>
     <div class="row">
       <div class="col-6">
-        <form id="task-form" novalidate>
+        <form id="task-form">
           <div class="form-group has-validation">
-            <label for="name">Name</label><input id="name" class="form-control" type="text" required />
-            <div class="invalid-feedback">
-              Please name your task.
+            <label for="name">Name</label><input id="name" class="form-control" type="text" />
+            <div id="name-alert" class="alert alert-danger d-none" role="alert">
+              A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
             </div>
           </div>
           <div class="form-group">
@@ -35,7 +35,7 @@
             <label for="assigned-to">Assigned to: </label> <input id="assigned-to" class="form-control" type="text" />
           </div>
           <div class="form-group">
-            <label for="due-date">Due date: </label> <input id="due-date" class="form-control" type="date" />
+            <label for="due-date">Due date: </label> <input id="due-date" class="form-control" type="date" required />
           </div>
           <div class="form-group">
             <select id="status" class="form-select" aria-label="Status of task">

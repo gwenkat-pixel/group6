@@ -1,35 +1,33 @@
 ( function(){
-   // Bootstrap's validation code 
-   var forms = document.querySelectorAll('.needs-validation');
-
-   // Loop over them and prevent submission
-   Array.prototype.slice.call(forms)
-     .forEach(function (form) {
-       form.addEventListener('submit', function (event) {
-         if (!form.checkValidity()) {
-           event.preventDefault();
-           event.stopPropagation();
-         }
- 
-         form.classList.add('was-validated');
-       }, false)
-     })
-
   const taskManager = new TaskManager(),
         taskForm = document.getElementById("task-form"),
-        name = document.getElementById("name"),
+        taskName = document.getElementById("name"),
         description = document.getElementById("description"),
         assignedTo = document.getElementById("assigned-to"),
         dueDate = document.getElementById("due-date");
 
+        function validateFormFieldInput() {
+          /*   const name = document.getElementById("name"),
+              description = document.getElementById("description").value,
+              assignedTo = document.getElementById("assigned-to").value; */
+          
+            if (!taskName.value) {
+              document.querySelector("#name-alert").classList.remove("d-none");
+              setTimeout(function(){
+                document.querySelector("#name-alert").classList.add("d-none");
+              }, 2000);
+              return false;
+            } else {return true;}
+          }
   taskForm.addEventListener("submit", function(event) {
-    if (true) { // add isValid(taskForm) here
-      taskManager.addTask(name.value, description.value, 
+    event.preventDefault();
+    if (validateFormFieldInput()) { // add isValid(taskForm) here
+      taskManager.addTask(taskName.value, description.value, 
         assignedTo.value, dueDate.value);
       taskManager.render();
     }
-    event.preventDefault();
-    taskForm.reset();
+
+   // taskForm.reset();
   });
 /*   taskManager.addTask("Go to supermarket", 
     "Pick up paper towels, burger buns, and tabouli", 
